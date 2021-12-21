@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<chroma>
+<annotation>
+;
+; Test input file for chroma main program
+;
+</annotation>
+<Param>
+  <InlineMeasurements>
+
+    <elem>
+      <Name>DISCO_FREQUENCY_SPLITTING_PROB_MM_SUPERB</Name>
+      <Param>
+        <max_path_length>8</max_path_length>
+        <p2_max>0</p2_max>
+        <mass_label>U-0.2390</mass_label>
+        <probing_distance>0</probing_distance>
+        <noise_vectors>5 5 5 5 5 5 5</noise_vectors>
+        <probing_file>tile32_32_32_64k8p7c16.txt</probing_file>
+        <max_rhs>1</max_rhs>
+	<max_rhs_interp>1</max_rhs_interp>
+	<use_mg>true</use_mg>
+	<use_interpolation>true</use_interpolation>
+	<use_hpe>true</use_hpe>
+	<hpe_probing_files>tile32_32_32_64k0p3c16.txt tile32_32_32_64k1p3c32.txt tile32_32_32_64k2p3c13.txt tile32_32_32_64k3p3c11.txt tile32_32_32_64k4p3c8.txt tile32_32_32_64k5p3c6.txt tile32_32_32_64k6p3c7.txt tile32_32_32_64k7p3c5.txt tile32_32_32_64k8p3c4.txt</hpe_probing_files>
+	<hpe_power>4</hpe_power>
+	<num_shifts>5</num_shifts>
+	<Shifts>0.0 0.05 0.25 0.50 1.0</Shifts>
+	<num_test_shifts_across>4</num_test_shifts_across>
+	<test_shifts_across>0.01 0.1 0.35 0.7</test_shifts_across>
+	<num_samples>5</num_samples>
+	<debug>false</debug>
+	<gamma_disp>8 7</gamma_disp>
+	<display_level_stats>true</display_level_stats>
+	<Propagator>
+          <version>10</version>
+          <quarkSpinType>FULL</quarkSpinType>
+          <obsvP>false</obsvP>
+          <numRetries>1</numRetries>
+          <FermionAction>
+                <FermAct>CLOVER</FermAct>
+                <Mass>-0.2390</Mass>
+                <clovCoeff>1.20536588031793</clovCoeff>
+                <AnisoParam>
+                  <anisoP>false</anisoP>
+                  <t_dir>3</t_dir>
+                  <xi_0>1</xi_0>
+                  <nu>1</nu>
+                </AnisoParam>
+                <FermState>
+                  <Name>STOUT_FERM_STATE</Name>
+                  <rho>0.125</rho>
+                  <n_smear>1</n_smear>
+                  <orthog_dir>-1</orthog_dir>
+                  <FermionBC>
+                    <FermBC>SIMPLE_FERMBC</FermBC>
+                    <boundary>1 1 1 -1</boundary>
+                  </FermionBC>
+                </FermState>
+          </FermionAction>
+              <InvertParam>
+              <invType>MG_PROTO_QPHIX_EO_CLOVER_INVERTER</invType>
+              <CloverParams>
+                <Mass>-0.2390</Mass>
+                <clovCoeff>1.20536588031793</clovCoeff>
+                <AnisoParam>
+                  <anisoP>false</anisoP>
+                  <t_dir>3</t_dir>
+                  <xi_0>1</xi_0>
+                  <nu>1</nu>
+                </AnisoParam>
+              </CloverParams>
+              <AntiPeriodicT>true</AntiPeriodicT>
+              <MGLevels>3</MGLevels>
+              <Blocking>
+                <elem>4 4 4 4</elem>
+                <elem>2 2 2 2</elem>
+              </Blocking>
+              <NullVecs>24 32</NullVecs>
+              <NullSolverMaxIters>800 800</NullSolverMaxIters>
+              <NullSolverRsdTarget>0.006 0.0006</NullSolverRsdTarget>
+              <NullSolverVerboseP>0 0</NullSolverVerboseP>
+              <OuterSolverNKrylov>10</OuterSolverNKrylov>
+              <OuterSolverRsdTarget>1.0e-5</OuterSolverRsdTarget>
+              <OuterSolverMaxIters>300</OuterSolverMaxIters>
+              <OuterSolverVerboseP>true</OuterSolverVerboseP>
+              <VCyclePreSmootherMaxIters>0 0</VCyclePreSmootherMaxIters>
+              <VCyclePreSmootherRsdTarget>0.1 0.1</VCyclePreSmootherRsdTarget>
+              <VCyclePreSmootherRelaxOmega>1.1 1.1</VCyclePreSmootherRelaxOmega>
+              <VCyclePreSmootherVerboseP>0 0</VCyclePreSmootherVerboseP>
+              <VCyclePostSmootherMaxIters>13 13</VCyclePostSmootherMaxIters>
+              <VCyclePostSmootherRsdTarget>0.06 0.06</VCyclePostSmootherRsdTarget>
+              <VCyclePostSmootherRelaxOmega>1.1 1.1</VCyclePostSmootherRelaxOmega>
+              <VCyclePostSmootherVerboseP>0 0</VCyclePostSmootherVerboseP>
+              <VCycleBottomSolverMaxIters>100 100</VCycleBottomSolverMaxIters>
+              <VCycleBottomSolverRsdTarget>0.06 0.06</VCycleBottomSolverRsdTarget>
+              <VCycleBottomSolverNKrylov>8 8</VCycleBottomSolverNKrylov>
+              <VCycleBottomSolverVerboseP>0 0</VCycleBottomSolverVerboseP>
+              <VCycleMaxIters>1 1</VCycleMaxIters>
+              <VCycleRsdTarget>0.1 0.1</VCycleRsdTarget>
+              <VCycleVerboseP>0 0</VCycleVerboseP>
+              <SubspaceId>foo_eo</SubspaceId>
+              <Reuse_Subspace>true</Reuse_Subspace>
+            </InvertParam>
+	</Propagator>
+        <use_ferm_state_link>true</use_ferm_state_link>
+      </Param>
+      <NamedObject>
+        <gauge_id>default_gauge_field</gauge_id>
+        <!-- prop_id>hada_prop</prop_id -->
+        <!-- evec_file>evecs</evec_file -->
+        <sdb_file>disco.sdb</sdb_file>
+      </NamedObject>
+
+    </elem>
+
+  </InlineMeasurements>
+  <nrow>32 32 32 64</nrow>
+</Param>
+
+<RNG>
+  <Seed>
+    <elem>11</elem>
+    <elem>11</elem>
+    <elem>11</elem>
+    <elem>0</elem>
+  </Seed>
+</RNG>
+
+<Cfg>
+    <cfg_type>SCIDAC</cfg_type>
+    <cfg_file>/sciclone/pscr/thwhyte/femto/chroma_dev/chromaform/chromaform/work/cl21_32_64_b6p3_m0p2350_m0p2050_cfg_1000.lime</cfg_file>
+    <parallel_io>true</parallel_io>
+</Cfg>
+</chroma>
