@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<chroma>
+<annotation>
+;
+; Test input file for chroma main program
+;
+</annotation>
+<Param>
+  <InlineMeasurements>
+
+    <elem>
+      <Name>DISCO_FREQUENCY_SPLITTING_PROB_MM_SUPERB</Name>
+      <Param>
+        <max_path_length>8</max_path_length>
+        <p2_max>0</p2_max>
+        <mass_label>u</mass_label>
+        <probing_distance>0</probing_distance>
+        <noise_vectors>2 2 2 2 2 2 2</noise_vectors>
+        <probing_file>colors.txt</probing_file>
+        <max_rhs>13</max_rhs>
+	<max_rhs_interp>13</max_rhs_interp>
+	<use_mg>true</use_mg>
+	<use_interpolation>true</use_interpolation>
+	<use_hpe>true</use_hpe>
+	<hpe_probing_files>tile8_8_8_16k0p3c16.txt tile8_8_8_16k1p3c32.txt tile8_8_8_16k2p3c16.txt tile8_8_8_16k3p3c8.txt tile8_8_8_16k4p3c8.txt tile8_8_8_16k5p3c8.txt</hpe_probing_files>
+	<hpe_power>4</hpe_power>
+	<num_shifts>5</num_shifts>
+	<Shifts>0.0 0.05 0.25 0.50 1.0</Shifts>
+	<num_test_shifts_across>4</num_test_shifts_across>
+	<test_shifts_across>0.01 0.1 0.35 0.7</test_shifts_across>
+	<num_samples>2</num_samples>
+	<debug>false</debug>
+	<gamma_disp>8 7</gamma_disp>
+	<del_s>-5 -4 -3 -2 0</del_s>
+	<display_level_stats>true</display_level_stats>
+	<Propagator>
+          <version>10</version>
+          <quarkSpinType>FULL</quarkSpinType>
+          <obsvP>false</obsvP>
+          <numRetries>1</numRetries>
+          <FermionAction>
+           <FermAct>CLOVER</FermAct>
+           <AnisoParam>
+             <anisoP>false</anisoP>
+             <t_dir>3</t_dir>
+             <xi_0>1.0</xi_0>
+             <nu>1.0</nu>
+           </AnisoParam>
+
+           <Mass>-0.35</Mass>
+           <clovCoeff>1.0</clovCoeff>
+           <FermionBC>
+             <FermBC>SIMPLE_FERMBC</FermBC>
+             <boundary>1 1 1 -1</boundary>
+           </FermionBC>
+          </FermionAction>
+          <InvertParam>
+              <invType>MG_PROTO_QPHIX_EO_CLOVER_INVERTER</invType>
+              <CloverParams>
+                <Mass>-0.35</Mass>
+                <clovCoeff>1.0</clovCoeff>
+                <AnisoParam>
+                  <anisoP>false</anisoP>
+                  <t_dir>3</t_dir>
+                  <xi_0>1</xi_0>
+                  <nu>1</nu>
+                </AnisoParam>
+              </CloverParams>
+              <AntiPeriodicT>true</AntiPeriodicT>
+              <MGLevels>2</MGLevels>
+              <Blocking>
+                <elem>2 2 2 2</elem>
+              </Blocking>
+              <NullVecs>24</NullVecs>
+              <NullSolverMaxIters>800</NullSolverMaxIters>
+              <NullSolverRsdTarget>0.006</NullSolverRsdTarget>
+              <NullSolverVerboseP>0</NullSolverVerboseP>
+              <OuterSolverNKrylov>10</OuterSolverNKrylov>
+              <OuterSolverRsdTarget>1.0e-5</OuterSolverRsdTarget>
+              <OuterSolverMaxIters>300</OuterSolverMaxIters>
+              <OuterSolverVerboseP>true</OuterSolverVerboseP>
+              <VCyclePreSmootherMaxIters>0</VCyclePreSmootherMaxIters>
+              <VCyclePreSmootherRsdTarget>0.1</VCyclePreSmootherRsdTarget>
+              <VCyclePreSmootherRelaxOmega>1.1</VCyclePreSmootherRelaxOmega>
+              <VCyclePreSmootherVerboseP>0</VCyclePreSmootherVerboseP>
+              <VCyclePostSmootherMaxIters>13</VCyclePostSmootherMaxIters>
+              <VCyclePostSmootherRsdTarget>0.06</VCyclePostSmootherRsdTarget>
+              <VCyclePostSmootherRelaxOmega>1.1</VCyclePostSmootherRelaxOmega>
+              <VCyclePostSmootherVerboseP>0</VCyclePostSmootherVerboseP>
+              <VCycleBottomSolverMaxIters>100</VCycleBottomSolverMaxIters>
+              <VCycleBottomSolverRsdTarget>0.06</VCycleBottomSolverRsdTarget>
+              <VCycleBottomSolverNKrylov>8</VCycleBottomSolverNKrylov>
+              <VCycleBottomSolverVerboseP>0</VCycleBottomSolverVerboseP>
+              <VCycleMaxIters>1</VCycleMaxIters>
+              <VCycleRsdTarget>0.1</VCycleRsdTarget>
+              <VCycleVerboseP>0</VCycleVerboseP>
+              <SubspaceId>foo_eo_0</SubspaceId>
+	      <Reuse_Subspace>true</Reuse_Subspace>
+	  </InvertParam>
+	</Propagator>
+        <use_ferm_state_link>true</use_ferm_state_link>
+      </Param>
+      <NamedObject>
+        <gauge_id>default_gauge_field</gauge_id>
+        <!-- prop_id>hada_prop</prop_id -->
+        <!-- evec_file>evecs</evec_file -->
+        <sdb_file>disco.sdb</sdb_file>
+      </NamedObject>
+
+    </elem>
+
+  </InlineMeasurements>
+  <nrow>8 8 8 16</nrow>
+</Param>
+
+<RNG>
+  <Seed>
+    <elem>11</elem>
+    <elem>11</elem>
+    <elem>11</elem>
+    <elem>0</elem>
+  </Seed>
+</RNG>
+
+<Cfg>
+ <cfg_type>SZINQIO</cfg_type>
+ <cfg_file>testrun_cfg_210.lime</cfg_file>
+</Cfg>
+</chroma>
