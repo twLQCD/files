@@ -11,27 +11,28 @@
     <elem>
       <Name>DISCO_FREQUENCY_SPLITTING_PROB_MM_SUPERB</Name>
       <Param>
-        <max_path_length>8</max_path_length>
+        <max_path_length>5</max_path_length>
         <p2_max>0</p2_max>
         <mass_label>u</mass_label>
         <probing_distance>0</probing_distance>
-        <noise_vectors>2 2 2 2 2 2 2</noise_vectors>
-        <probing_file>colors.txt</probing_file>
-        <max_rhs>13</max_rhs>
-	<max_rhs_interp>13</max_rhs_interp>
-	<use_mg>true</use_mg>
-	<use_interpolation>true</use_interpolation>
-	<use_hpe>true</use_hpe>
+	<probing_file>tile8_8_8_16k4p5c16.txt</probing_file>
 	<hpe_probing_files>tile8_8_8_16k0p3c16.txt tile8_8_8_16k1p3c32.txt tile8_8_8_16k2p3c16.txt tile8_8_8_16k3p3c8.txt tile8_8_8_16k4p3c8.txt tile8_8_8_16k5p3c8.txt</hpe_probing_files>
+        <noise_vectors>5 5 5 5 5 5 5</noise_vectors>
+        <max_rhs>16</max_rhs>
+	<max_rhs_interp>8</max_rhs_interp>
+	<use_mg>true</use_mg>
+	<use_interpolation>false</use_interpolation>
+	<use_hpe>true</use_hpe>
 	<hpe_power>4</hpe_power>
 	<num_shifts>5</num_shifts>
-	<Shifts>0.0 0.05 0.25 0.50 1.0</Shifts>
-	<num_test_shifts_across>4</num_test_shifts_across>
-	<test_shifts_across>0.01 0.1 0.35 0.7</test_shifts_across>
-	<num_samples>2</num_samples>
+	<Shifts>0 0.05 0.25 0.50 1.00</Shifts>
+	<num_samples>5</num_samples>
 	<debug>false</debug>
-	<gamma_disp>8 7</gamma_disp>
-	<del_s>-5 -4 -3 -2 0</del_s>
+	<interp_checkpoint>false</interp_checkpoint>
+	<trace_checkpoint>false</trace_checkpoint>
+	<gamma_disp>5 7</gamma_disp>
+	<del_s>-1.9586 0</del_s>
+	<num_bcshifts>76</num_bcshifts>
 	<display_level_stats>true</display_level_stats>
 	<Propagator>
           <version>10</version>
@@ -76,7 +77,7 @@
               <NullSolverRsdTarget>0.006</NullSolverRsdTarget>
               <NullSolverVerboseP>0</NullSolverVerboseP>
               <OuterSolverNKrylov>10</OuterSolverNKrylov>
-              <OuterSolverRsdTarget>1.0e-5</OuterSolverRsdTarget>
+              <OuterSolverRsdTarget>1e-1</OuterSolverRsdTarget>
               <OuterSolverMaxIters>300</OuterSolverMaxIters>
               <OuterSolverVerboseP>true</OuterSolverVerboseP>
               <VCyclePreSmootherMaxIters>0</VCyclePreSmootherMaxIters>
@@ -115,7 +116,7 @@
 
 <RNG>
   <Seed>
-    <elem>11</elem>
+    <elem>12</elem>
     <elem>11</elem>
     <elem>11</elem>
     <elem>0</elem>
